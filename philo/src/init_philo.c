@@ -6,7 +6,7 @@
 /*   By: rnavarre <rnavarre@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 09:37:24 by rnavarre          #+#    #+#             */
-/*   Updated: 2021/12/20 13:41:58 by rnavarre         ###   ########.fr       */
+/*   Updated: 2022/03/16 09:38:27 by rnavarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static _Bool
 		pthread_mutex_init(philo->chopstick_mutex_list + i, NULL);
 		i++;
 	}
-	if (!philo->chopstick_mutex_list)
+	if (!philo->chopstick_mutex_list + philo->diner_count - 1)
 		return (false);
 	pthread_mutex_init(&philo->print_mutex, NULL);
 	return (true);

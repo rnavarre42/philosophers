@@ -6,7 +6,7 @@
 /*   By: rnavarre <rnavarre@student.42madrid>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/13 09:38:35 by rnavarre          #+#    #+#             */
-/*   Updated: 2021/12/20 13:27:18 by rnavarre         ###   ########.fr       */
+/*   Updated: 2022/03/16 13:13:10 by rnavarre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,6 @@ typedef struct s_diner
 	int					id;
 	int					times_eat;
 	uint64_t			time_to_death;
-	uint64_t			excess_time;
 	pthread_t			pthread;
 	pthread_mutex_t		*chopstick_min_mutex;
 	pthread_mutex_t		*chopstick_max_mutex;

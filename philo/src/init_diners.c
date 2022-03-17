@@ -24,13 +24,13 @@ void	init_diners(t_philo *philo)
 	{
 		diner->id = i + 1;
 		diner->parent = philo;
-		diner->chopstick_min_mutex = philo->chopstick_mutex_list + i;
-		diner->chopstick_max_mutex = philo->chopstick_mutex_list + i + 1;
-		diner->time_to_death = now() + diner->parent->time_to_die;
-		diner++;
-		i++;
+		if (diner != '\0')
+		{
+			diner->chopstick_min_mutex = philo->chopstick_mutex_list + i;
+			diner->chopstick_max_mutex = philo->chopstick_mutex_list + i + 1;
+			diner->time_to_death = now() + diner->parent->time_to_die;
+			diner++;
+			i++;
+		}
 	}
-	diner--;
-	diner->chopstick_min_mutex = philo->chopstick_mutex_list;
-	diner->chopstick_max_mutex = philo->chopstick_mutex_list + i - 1;
 }

@@ -54,7 +54,7 @@ static _Bool
 		pthread_mutex_init(philo->chopstick_mutex_list + i, NULL);
 		i++;
 	}
-	if (!philo->chopstick_mutex_list + philo->diner_count - 1)
+	if (!philo->chopstick_mutex_list)
 		return (false);
 	pthread_mutex_init(&philo->print_mutex, NULL);
 	return (true);
